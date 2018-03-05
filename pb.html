@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Deposite Calculator</title>
+    <link rel="stylesheet" href="css/pb.css">     
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+</head>
+<body>
+	<div class=" main" >
+		<div class="main-head">
+			<div class="currency-block">
+				<div id="hr" data-currency="грн" class="currency currency-active">Гривня</div>
+				<div id="usd" data-currency="дол" class="currency">Долар</div>
+				<div id="eu" data-currency="євро" class="currency">Євро</div>
+			</div>		
+		</div>	
+		<div class="row cont">		
+				<div class="col-8 input-block ">
+					<div class="deposite-menu">
+						<a class="deposite-link" href="">						
+								<span id="choosed-deposite">Стандарт</span>
+								<i class="fas fa-caret-down"></i>				
+						</a>
+						<div class="deposite-list">
+							<ul >
+								<li><div class="hr" id='hr00'>Стандарт строковий</div></li>
+								<li><div class="hr" id='hr01'>Стандарт</div></li>
+								<li><div class="hr" id='hr02'>Депозит Зручний</div></li>
+								<li><div class="hr" id='hr03'>Депозит Плюс</div></li>
+								<li><div class="hr" id='hr04'>Приват-вклад</div></li>
+								<li><div class="hr" id='hr05'>До запитання</div></li>	
+							
+								<li><div class="usd" id='usd00'>Стандарт Плюс</div></li>
+								<li><div class="usd" id='usd01'>Стандарт Доллар</div></li>
+								<li><div class="usd" id='usd02'>Депозит Зручний</div></li>
+								<li><div class="usd" id='usd03'>Депозит Плюс</div></li>
+								<li><div class="usd" id='usd04'>Приват-вклад</div></li>
+								<li><div class="usd" id='usd05'>До запитання</div></li>	
+							
+								<li><div class="eu" id='eu00'>Стандарт Плюс</div></li>
+								<li><div class="eu" id='eu01'>Стандарт Євро</div></li>
+								<li><div class="eu" id='eu02'>Депозит Зручний</div></li>
+								<li><div class="eu" id='eu03'>Депозит Плюс</div></li>
+								<li><div class="eu" id='eu04'>Приват-вклад</div></li>
+								<li><div class="eu" id='eu05'>До запитання</div></li>	
+							</ul>							
+						</div>
+					</div>
+					<div class="row term-deposite">
+						<div class="col-md-3 table-column">
+							 <div><span>Ставка (на рік)/ строк (міс.)</span></div>	
+						</div>
+						<div class="col-md-7 table-column">
+							<div class="range-block">
+								<div class="percents">
+									<p>gjgd</p>
+								</div>
+								<div class="range-container"></div>
+								<div class="months">
+							    	<p>fhdd</p>
+							    </div>
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div id="edit-block">								
+								<span>0</span><span>%</span>
+								<i class="fas fa-pencil-alt fa-sm" id="percents-edit-icon"></i>						
+								<div>
+									<input id="percents-edit" class="well-input" maxlength="4" class="input-edit" type="text"></input>
+								</div>
+							</div>						
+						</div>								
+					</div>
+					<div class="row sum-deposite">
+						<div class="col-md-3 table-column">
+							<div> <span>Сума</span>	</div>	
+						</div>
+						<div class="col-md-7 table-column">
+							<div class="simple-range-block">							
+								<div>
+									<input class="r1" id="sum-range" type="range" step="1" min="0" max="1000000" value="5000"></input>
+								</div>			
+							</div>
+						</div>
+						<div class="col-md-2 table-column">
+							<div><input type="text" class="well-input" id="sum-edit" maxlength="7" value="5000"></input></div>
+						</div>
+					</div>	
+					<div class="row add-deposite">
+						<div class="col-md-3 table-column">
+							<div> <span>Щомісячне поповнення</span>	</div>	
+						</div>
+						<div class="col-md-7 table-column">
+							<div class="simple-range-block">							
+								<div><input class="r1" id="add-range" type="range" step="1" min="0" max="50000" value="500"></input></div>			
+							</div>
+						</div>
+						<div class="col-md-2 table-column">
+							<div><input type="text" class="well-input" id="add-edit" maxlength="5" value="500"></input></div>
+						</div>						
+					</div>
+					<div class="row">
+						<div class="col-md-3 table-column">
+							<div> <span>Кількість продовжень</span></div>	
+						</div>
+						<div class="col-md-7 table-column">
+							<div class="simple-range-block">							
+								<div>
+									<input class="r1" id="continue-range" type="range" step="1" min="0" max="5" value="0" ></input>	
+								</div>	
+								<div class="years">
+									<span>0</span>
+									<span>1</span>
+									<span>2</span>
+									<span>3</span>
+									<span>4</span>
+									<span>5</span>
+								</div>		
+							</div>
+						</div>
+						<div class="col-md-2">
+							<div class="continue-label"><div>0</div></div>
+						</div>						
+					</div>
+					<div class="row">
+						<div class="col-md-3 table-column">
+							<div> <span>Відсотки</span></div>	
+						</div>
+						<div class="col-md-9 table-column">
+							<div class="simple-range-block">
+								<ul class="calculator-switcher">
+									<li class="active output-percents-btn" id="capitalization-true">
+										<a href="#">
+											<img src="card.png" alt="">
+											&nbsp;&nbsp;
+											До вкладу
+										</a>
+										<p>Збільшується єфективна дохідність</p>		
+									</li>
+									<li class="output-percents-btn not-active" id="capitalization-false">
+										<a href="#">
+											<img src="capital.png" alt="">
+											&nbsp;&nbsp; На картку
+										</a>
+										<p>Відсотки можливо відразу витрачати</p>	
+									</li>
+								</ul>							
+									
+							</div>
+						</div>												
+					</div>
+					<div class="row">
+						<div class="col-md-3 table-column">
+							<div> <span>Податок</span></div>	
+						</div>
+						<div class="col-md-9 table-column">
+							<div class="simple-range-block">
+								<ul class="calculator-switcher tax">
+									<li class="active tax-btn" id="tax-false">
+										<a href="#">
+											Без урахування
+										</a>		
+									</li>
+									<li class="tax-btn not-active" id="tax-true">
+										<a href="#">
+											З урахуванням
+										</a>	
+									</li>
+								</ul>							
+									
+							</div>
+						</div>												
+					</div>
+					<div class="additional-comment">
+						* Розрахунок процентів має довідковий характер.
+					</div>								
+				</div>
+				<div class="col-4 ">
+					<div class="output-block">
+						<div class="row" >
+							<div class="col-md-6 centerstyle">
+								<span>Вклав</span>
+								<h3 class="invest">gggg</h3>
+								<div class="calculator-column bar-invest">
+									<div class="bar bar-percents"></div>
+									<div class="bar bar-add" data-toggle="tooltip" data-placement="left" title=""></div>
+									<div class="bar bar-sum" data-toggle="tooltip" data-placement="left" title=""></div>
+								</div>
+							</div>
+							<div class="col-md-6 centerstyle">
+								<span>Отримано</span>
+								<h3 class="result">fgggg</h3>
+								<div class="calculator-column bar-result">
+									<div class="bar bar-percents"  data-toggle="tooltip" data-placement="left" title="" ></div>
+									<div class="bar bar-add" data-toggle="tooltip" data-placement="left" title=""></div>
+									<div class="bar bar-sum" data-toggle="tooltip" data-placement="left" title=""></div>
+								</div>
+							</div>
+						</div>	
+						<div class="row">
+							<div class="col-md-7">
+								<span>Сума вкладу</span>
+							</div>
+							<div class="col-md-5">
+								<span id="sum-result">1000 uhy</span>
+							</div>
+						</div>
+						<div class="row result-stripe">
+							<div class="col-md-7">
+								<span >Сума поповнень</span>
+							</div>
+							<div class="col-md-5">
+								<span id="add-result">100 uhy</span>
+							</div>
+						</div>
+						<div class="row result-stripe">
+							<div class="col-md-7">
+								<span>Відсоткова ставка</span>
+							</div>
+							<div class="col-md-5">
+								<span id="percents-result">1000 uhy</span>
+							</div>
+						</div>
+						<div class="row result-stripe">
+							<div class="col-md-7">
+								<span>Відсотки (дохід)</span>
+							</div>
+							<div class="col-md-5">
+								<span id="full-result">1000 uhy</span>
+							</div>
+						</div>
+						<hr style="margin-top: 1rem; ">
+						<div class="row result-stripe">
+							<div class="col-md-7">
+								<a id="create-dep" href="#" class="btn btn-success">Оформити депозит</a>
+							</div>
+							
+						</div>
+				</div> 
+			</div>
+		</div>	
+	</div>	
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+	<script src="js/pb.js"></script>  
+
+</body>
+</html>
+<!-- Author: S.Gaidai  -->
